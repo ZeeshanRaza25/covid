@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import CountrySelect from './components/Search/Search';
+import LanguageSharpIcon from '@material-ui/icons/LanguageSharp';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <CountrySelect />
+      <div className="abc">
+      {/* <LanguageSharpIcon /> */}
+      <h1 style={{ Color: '#4E4E4E' }}>COVID-19 Pandemic Worldwide</h1>
     </div>
+    </div >
   );
 }
 
