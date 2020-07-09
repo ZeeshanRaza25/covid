@@ -105,7 +105,7 @@ export default function TableDetail() {
     // }
 
     if (isFetching) {
-        return <div>Data Loading.....</div>
+        return <div>{' '}</div>
     }
 
     return (

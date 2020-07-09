@@ -53,7 +53,7 @@ export default function AllData() {
 
 
     if (isFetching) {
-        return <div>Data Loading.....</div>
+        return <div>{' '}</div>
     }
 
     return (

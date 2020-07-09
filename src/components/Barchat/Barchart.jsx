@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -21,7 +22,9 @@ const Barchart = () => {
   return (
     <Grid container alignItems="center" alignContent="center" justify="center">
       <Grid item xs={12} sm={9}>
-        <h2>Bar Example</h2>
+        <Typography variant="h4" component="h3" align="center">
+          Bar chart
+        </Typography>
         <Bar
           data={data}
           options={{
