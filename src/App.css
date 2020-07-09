@@ -23,7 +23,7 @@
 }
 .App-header {
   background-color: #F5F5F5;
-  min-height: 1vh;
+  /* min-height: 1vh; */
   display: flex;
   flex-direction: row;
   align-items: center;

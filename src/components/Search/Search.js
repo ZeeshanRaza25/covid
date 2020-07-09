@@ -9,8 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 function countryToFlag(isoCode) {
   return typeof String.fromCodePoint !== 'undefined'
     ? isoCode
-        .toUpperCase()
-        .replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
+      .toUpperCase()
+      .replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
     : isoCode;
 }
 
@@ -28,33 +28,35 @@ export default function CountrySelect() {
   const classes = useStyles();
 
   return (
-    <Autocomplete
-      id="country-select-demo"
-      style={{ width: `25%`, marginRight: `25%`  }}
-      options={countries}
-      classes={{
-        option: classes.option,
-      }}
-      autoHighlight
-      getOptionLabel={(option) => option.label}
-      renderOption={(option) => (
-        <React.Fragment>
-          <span>{countryToFlag(option.code)}</span>
-          {option.label} ({option.code}) +{option.phone}
-        </React.Fragment>
-      )}
-      renderInput={(params) => (
-        <TextField
-          {...params}
-          label="Search or choose a country"
-          variant="outlined"
-          inputProps={{
-            ...params.inputProps,
-            autoComplete: 'new-password', // disable autocomplete and autofill
-          }}
-        />
-      )}
-    />
+    <div style={{marginTop: '1%', justifyItems: 'center', alignItems: 'center'}}> 
+      <Autocomplete
+        id="country-select-demo"
+        style={{width: `60%`}}
+        options={countries}
+        classes={{
+          option: classes.option,
+        }}
+        autoHighlight
+        getOptionLabel={(option) => option.label}
+        renderOption={(option) => (
+          <>
+            <span>{countryToFlag(option.code)}</span>
+            {option.label} ({option.code}) +{option.phone}
+          </>
+        )}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label="Search or choose a country"
+            variant="outlined"
+            inputProps={{
+              ...params.inputProps,
+              autoComplete: 'new-password', // disable autocomplete and autofill
+            }}
+          />
+        )}
+      />
+    </div>
   );
 }
 
