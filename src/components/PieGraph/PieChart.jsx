@@ -18,7 +18,7 @@ export default function PieChart() {
                     `https://corona.lmao.ninja/v2/all`
                 );
                 const json = await response.json();
-                console.log("barchart =>", json);
+                // console.log("barchart =>", json);
                 setResult(json);
                 setFetching(false);
             } catch (error) {
@@ -39,13 +39,13 @@ export default function PieChart() {
     };
 
     if (isFetching) {
-        return <div>Data Loading.....</div>
+        return <div> {' '}</div>
     }
 
     return (
         <Grid container alignItems="center" alignContent="center" justify="center">
-            <Grid container item sm={9} xs={12}>
-                <Grid item sm={12}>
+            <Grid container item sm={12} xs={12}>
+                <Grid item sm={12} style={{ marginBottom: '5%' }}>
                     <Typography variant="h4" component="h3" align="center">
                         PieChart
                     </Typography>

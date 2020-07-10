@@ -41,7 +41,7 @@ export default function AllData() {
                     `https://corona.lmao.ninja/v2/all`
                 );
                 const json = await response.json();
-                console.log(json);
+                // console.log(json);
                 setResult(json);
                 setFetching(false);
             } catch (error) {

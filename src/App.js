@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
-// import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Header from './components/Header';
-// import CountrySelect from './components/Search/Search';
-import Barchart from './components/Barchat/Barchart';
+import LinChart from './components/Barchat/Barchart';
 // import LanguageSharpIcon from '@material-ui/icons/LanguageSharp';
 import PieChart from './components/PieGraph/PieChart';
-// import { Typography } from '@material-ui/core';
 import TableDetail from './components/table';
 import AllData from './components/all';
 
@@ -26,25 +23,24 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12}>
           <Header />
         </Grid>
-        <Grid container item>
+        <Grid container item style={{ marginTop: '4%' }}>
           <AllData />
         </Grid>
-        <Grid container item xs={12}>
-          <Grid item xs="auto" sm={6}>
-            <Barchart />
-          </Grid>
-          <Grid item xs="auto" sm={6}>
+        <Grid container item xs={12} alignItems="center" alignContent="center" justify="center" style={{ marginTop: '6%' }}>
+          {/* <Grid item xs="auto" sm={6}>
+            <LinChart />
+          </Grid> */}
+          <Grid item xs="auto" sm={8}>
             <PieChart />
           </Grid>
         </Grid>
-        <Grid container item>
+        <Grid container item style={{ marginTop: '7%' }}>
           <Grid item xs='auto' />
           <Grid item xs={12}>
             <TableDetail />
